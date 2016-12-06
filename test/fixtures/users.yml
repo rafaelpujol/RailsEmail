@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  [Username: MyString
+  Password: MyString
+  CreateDate: 2016-12-05 21:59:42
+  Active: 
+
+two:
+  [Username: MyString
+  Password: MyString
+  CreateDate: 2016-12-05 21:59:42
+  Active: 

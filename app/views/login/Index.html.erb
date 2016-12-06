@@ -1,0 +1,46 @@
+
+    <style>
+        #UserName {
+            background: #fff url(<%= image_url('loginuser.png') %>) -6px -5px no-repeat;
+           padding: 8px 0px 8px 30px;
+        }
+
+        #PassWord {
+            background: #fff url(<%= image_url('loginpass.png') %>) -6px -5px no-repeat;
+          padding: 8px 0px 8px 30px;
+        }
+
+
+    </style>
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+      <div>
+        <div>
+
+          <h1 class="logo-name"><img style="width: 310px;"src="<%= image_url('logo.png') %>"/></h1>
+
+        </div>
+        <p><h3>Control de Acceso</h3></p>
+
+
+
+
+          <form id="form" class="m-t" role="form"  method="POST">
+            <div class="form-group">
+              <input type="text" class="form-control" id="UserName" name="UserName" placeholder="Usuario">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="PassWord" name="PassWord" placeholder="Contraseña">
+            </div>
+            <!--
+            <button type="submit" class="btn btn-primary block full-width m-b">Acceder</button>
+            -->
+            <%= link_to "Acceder",  {:controller => "home", :action => "Index" },:class => "btn btn-primary block full-width m-b" %>
+
+          </form>
+        <%= link_to "Registrar me", :controller => "home", :action => "Index" %>
+
+
+          <p class="m-t"> <small>Ruby Email &copy; <%= Date.current.year %></small> </p>
+
+      </div>
+    </div>
