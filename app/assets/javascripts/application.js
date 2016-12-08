@@ -16,6 +16,9 @@
 //= require Jquery.metismenu.min.js
 //= require jquery.slimscroll.min.js
 //= require Common.js
+//= require jquery_ujs
+//= require turbolinks
+//= require_tree .
 
 
 

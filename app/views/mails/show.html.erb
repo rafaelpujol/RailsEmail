@@ -1,0 +1,29 @@
+<div class="mail-box-header">
+  <div class="pull-right tooltip-demo">
+    <a href="javascript:;" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Reponder"><i class="fa fa-reply"></i> Reply</a>
+    <a href="javascript:;" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Imprimir"><i class="fa fa-print"></i> </a>
+
+  <%= link_to '<i class="fa fa-trash-o"></i>'.html_safe,{ :action => :destroy, :id => @mail.id }, :method => :delete,
+              :data => { :confirm => 'Realmente deseas eliminar?' },
+              :class=>"btn btn-white btn-sm" ,:'data-toggle'=>"tooltip", :'data-placement'=>"top", :title=>"Eliminar"%>
+
+  </div>
+  <h2>
+  <%= @mail.from %>
+  </h2>
+  <div class="mail-tools tooltip-demo m-t-md">
+
+
+    <h3>
+      <span class="font-noraml">Titulo: </span><%= @mail.subject %>
+    </h3>
+    <h5>
+      <span class="pull-right font-noraml"> <%=  @mail.create_date.to_formatted_s(:long)    %></span>
+
+    </h5>
+  </div>
+
+  <div class="mail-body">
+  <%= @mail.body %>
+  </div>
+</div>

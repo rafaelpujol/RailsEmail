@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from: MyString
+  to: MyString
+  cc: MyString
+  bcc: MyString
+  subject: MyString
+  body: MyText
+  createdate: 2016-12-07 23:39:22
+  delete: false
+
+two:
+  from: MyString
+  to: MyString
+  cc: MyString
+  bcc: MyString
+  subject: MyString
+  body: MyText
+  createdate: 2016-12-07 23:39:22
+  delete: false

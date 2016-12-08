@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'mails/index'
   get 'sent', to: 'mails#sent'
   get 'erase', to: 'mails#erase'
-
+  #delete 'mails/:id', to: 'mails#destroy'
 
   root  'mails#index'
   #root  'login#Index'

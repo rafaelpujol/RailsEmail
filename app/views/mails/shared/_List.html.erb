@@ -1,0 +1,34 @@
+<h2> <%= place %></h2>
+
+<div class="ibox-title">
+ <%= link_to '<i class="fa fa-plus"></i> Crear Correo'.html_safe, {:controller => "mails", :action => "new"}, :class=> "btn btn-white btn-sm" %>
+</div>
+
+<div class="ibox-content">
+  <table class="table">
+    <% @mails.each do |m|  %>
+        <tr>
+          <td>
+
+            <%= link_to '<i class="fa fa-trash text-danger"></i>'.html_safe, { :action => :destroy, :id => m.id }, :method => :delete, :data => { :confirm => 'realmente deseas eliminar?' }  %>
+  &nbsp; &nbsp; &nbsp;
+            <%= link_to '<i class="fa fa-eye"></i>'.html_safe, { :action => :show, :id => m.id }  %>
+          </td>
+          <td>
+            <%= m.from %>
+          </td>
+
+          <td>
+            <%= m.subject %>
+          </td>
+
+
+          <td>
+            <%=  m.create_date.to_formatted_s(:long)    %>
+          </td>
+        </tr>
+
+    <% end %>
+  </table>
+
+</div>

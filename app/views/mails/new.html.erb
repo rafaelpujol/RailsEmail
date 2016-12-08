@@ -4,10 +4,18 @@
 
 <h2>Creación de Correo</h2>
 </div>
+
+
 <div class="mail-box">
 
 <div class="mail-body form-horizontal">
 <%= form_for(@mail) do |m|  %>
+      <% @mail.errors.full_messages.each do |e|  %>
+      <div class="text-danger">
+               *<%= e %>
+
+            </div>
+          <%end%>
   <div class="form-group">
     <label class="col-sm-2 control-label">To:</label>
 
