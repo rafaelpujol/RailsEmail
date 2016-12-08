@@ -7,10 +7,33 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <style>
+   .LoginUser{
+      background: #fff url(<%= image_url('loginuser.png') %>) -6px -5px no-repeat;
+      padding: 8px 0px 8px 30px;
+     width: 100%;
+    }
+
+    .LoginPass {
+      background: #fff url(<%= image_url('loginpass.png') %>) -6px -5px no-repeat;
+      padding: 8px 0px 8px 30px;
+      width: 100%;
+    }
+
+
+
+
+  </style>
 </head>
 <body>
-<%= yield %>
+<div class="middle-box text-center loginscreen animated fadeInDown">
 
+      <h1 class="logo-name"><img style="width: 310px;"src="<%= image_url('logo.png') %>"/></h1>
+<p class="notice text-waring"><%= notice %></p>
+<p class="alert text-danger"><%= alert %></p>
+<%= yield %>
+</div>
 
 </body>
 </html>

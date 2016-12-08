@@ -48,18 +48,10 @@ padding-top: 80px;
 .back-to-top:hover {    
     background-color: rgba(135, 135, 135, 0.50);
 }
-/*
 
-.For-bg .navbar-fixed-top,
-.For-bg .navbar-static-top {
-  background: #312f83;
-  
+.mail-textarea-body {
+    margin: 0px -0.399306px 0px 0px !important;
+    width: 913px;
+    height: 156px !important;
+
 }
- .top-navigation .For-bg .nav > li > a {
-     color: #f0fff0; 
-}
- .For-bg .nav  li.open > a,
-  .top-navigation .For-bg .nav > li > a:hover {
-  color:#676a6c 
-}
-*/

@@ -10,14 +10,16 @@
           <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <span class="clear">
                             <span class="block m-t-xs">
-                                <strong class="font-bold center-block">Usuario</strong>
+                                <strong class="font-bold center-block"> <%= current_user.email %> </strong>
                             </span> <span class="text-muted text-xs block center-block">Opciones: <b class="caret"></b></span>
                         </span>
           </a>
           <ul class="dropdown-menu animated fadeInRight m-t-xs">
-            <li><a href="">Cambiar Clave</a></li>
+            <li>
+              <%= link_to "Cambiar Clave", edit_user_registration_path %>
+             </li>
             <li class="divider"></li>
-            <li><a href="">Logout</a></li>
+            <li><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete %></li>
           </ul>
         </div>
         <div class="logo-element">
@@ -25,15 +27,16 @@
         </div>
       </li>
       <li>
-        <a href=""><i class="fa fa-envelope-o"></i> <span class="nav-label">Inbox</span> </a>
+
+        <%= link_to '<i class="fa fa-envelope-o"></i> <span class="nav-label">Inbox</span> '.html_safe, {:controller => "mails", :action => "index"} %>
 
       </li>
       <li>
-        <a href=""><i class="fa fa-paper-plane-o"></i> <span class="nav-label">Enviados</span> </a>
-
+        <%= link_to '<i class="fa fa-paper-plane-o""></i> <span class="nav-label">Enviados</span> '.html_safe, {:controller => "mails", :action => "sent"} %>
       </li>
       <li>
-        <a href=""><i class="fa fa-trash"></i> <span class="nav-label">Borrado</span> </a>
+        <%= link_to '<i class="fa fa-trash""></i> <span class="nav-label">Borrado</span> '.html_safe, {:controller => "mails", :action => "erase"} %>
+
 
       </li>
 

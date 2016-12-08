@@ -1,0 +1,61 @@
+
+<div class="mail-box-header">
+
+
+<h2>Creación de Correo</h2>
+</div>
+<div class="mail-box">
+
+<div class="mail-body form-horizontal">
+<%= form_for(@mail) do |m|  %>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">To:</label>
+
+    <div class="col-sm-10">
+      <%= m.text_field :to, :class=> "form-control" %>
+
+    </div>
+  </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Cc:</label>
+
+        <div class="col-sm-4">
+          <%= m.text_field :cc, :class=> "form-control" %>
+        </div>
+
+        <label class="col-sm-2 control-label">Bcc:</label>
+
+        <div class="col-sm-4">
+          <%= m.text_field :bcc, :class=> "form-control" %>
+        </div>
+      </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Titulo:</label>
+
+    <div class="col-sm-10">
+      <%= m.text_field :subject, :class=> "form-control" %>
+    </div>
+  </div>
+
+      <div class="form-group">
+
+        <label class="col-sm-2 control-label">Mensaje:</label>
+        <div class="col-sm-10">
+          <%= m.text_area :body, :class=> "form-control mail-textarea-body" %>
+        </div>
+      </div>
+
+
+      <div class="mail-body text-right tooltip-demo">
+        <%=  m.submit 'Enviar'.html_safe, :class=>"btn btn-sm btn-primary", :'data-toggle'=>"tooltip" , :'data-placement'=>"top" , :title=>"Enviar" %>
+
+      <%= link_to '<i class="fa fa-times"></i> Cancelar'.html_safe, {:controller => "mails" ,:action => "index"}, :class=> "btn btn-danger btn-sm ", :'data-toggle'=>"tooltip", :'data-placement'=>"top", :title=>"cancelar email" %>
+
+
+
+      </div>
+<%end %>
+</div>
+</div>
