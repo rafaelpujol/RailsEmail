@@ -7,12 +7,27 @@
 <div class="ibox-content">
   <table class="table">
     <% @mails.each do |m|  %>
-        <tr>
+        <td>
+          <%if m.read %>
+             <tr>
+          <% else %>
+            <tr  class="unread" >
+          <% end %>
+        </td>
+
           <td>
 
             <%= link_to '<i class="fa fa-trash text-danger"></i>'.html_safe, { :action => :destroy, :id => m.id }, :method => :delete, :data => { :confirm => 'realmente deseas eliminar?' }  %>
   &nbsp; &nbsp; &nbsp;
             <%= link_to '<i class="fa fa-eye"></i>'.html_safe, { :action => :show, :id => m.id }  %>
+          </td>
+
+          <td>
+            <%if m.read %>
+                Leido
+            <% else %>
+            Sin  leer
+            <% end %>
           </td>
           <td>
             <%= m.from %>

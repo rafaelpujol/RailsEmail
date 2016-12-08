@@ -1,21 +1,34 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  from: MyString
-  to: MyString
+  from: rafael.pujol@gmail.com
+  to: info@rafaelpujol.com
   cc: MyString
   bcc: MyString
-  subject: MyString
-  body: MyText
-  createdate: 2016-12-07 23:39:22
-  delete: false
+  subject: una pruena
+  body: el cuero de pueba
+  create_date: 2016-12-07 23:39:22
+  erase: false
+  read: false
 
 two:
-  from: MyString
-  to: MyString
-  cc: MyString
-  bcc: MyString
-  subject: MyString
-  body: MyText
-  createdate: 2016-12-07 23:39:22
-  delete: false
+  from: info@rafaelpujol.com
+  to: info@rafaelpujol.com
+  cc:
+  bcc:
+  subject: segundo registro
+  body: cuerpo del correo electrinico
+  create_date: 2016-12-08 23:39:22
+  erase: false
+  read: false
+
+three:
+  from:
+  to: info@rafaelpujol.com
+  cc:
+  bcc:
+  subject:
+  body: cuerpo del correo electrinico
+  create_date: 2016-12-08 23:39:22
+  erase: false
+  read: false

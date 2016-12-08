@@ -2,26 +2,27 @@ class MailsController < ApplicationController
 
   before_action :authenticate_user!
   def index
-    @mails  = Mail.where('"to"' + "  LIKE ? AND erase = ?", '%' + current_user.email + '%', false)
+    @mails  = Mail.where('"to"' + "  LIKE ? AND erase = ?", '%' + current_user.email + '%', false).order('create_date DESC')
 
   end
 
 
   def sent
 
-    @mails  = Mail.where('"from"' +"LIKE ? AND erase = ?", '%' + current_user.email + '%', false )
+    @mails  = Mail.where('"from"' +"LIKE ? AND erase = ?", '%' + current_user.email + '%', false ).order('create_date DESC')
   end
 
   def erase
 
 
-    @mails  = Mail.where('("from"' + 'LIKE ? or '+ '"to"' + ' LIKE  ?) AND erase = ? ', '%' + current_user.email + '%','%' + current_user.email + '%', true )
+    @mails  = Mail.where('("from"' + 'LIKE ? or '+ '"to"' + ' LIKE  ?) AND erase = ? ', '%' + current_user.email + '%','%' +
+                         current_user.email + '%', true ).order('create_date DESC')
   end
 
 
   def show
      @mail = Mail.find(params[:id])
-
+     @mail.read_mail
   end
 
 
